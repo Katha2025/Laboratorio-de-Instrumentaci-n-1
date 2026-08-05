@@ -57,12 +57,14 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/1ebef4ae-e72b-406a-ab9a-502729053fc4" />
 
 **Imagen 2** *Microcontrolador NI DAQMx
+
 tomado de: https://www.digikey.com/en/products/detail/ni/782602-01/12817647*
 
 
 <img width="555" height="312" alt="image" src="https://github.com/user-attachments/assets/1836559d-9071-4441-9362-f7c04407cbf6" />
 
 **Imagen 3** *Microcontrolador NI DAQMx 
+
 tomado de: Elaboración propia. Prieto, Marya
 
 
