@@ -39,6 +39,7 @@ Para la selección del sensor se evaluaron diferentes alternativas con el fin de
 En consecuencia, la galga extensiométrica proporcionó una señal respiratoria más estable y representativa, facilitando la obtención de la frecuencia respiratoria y el análisis del patrón respiratorio requerido en la práctica. Esta elección es consistente con el objetivo del laboratorio de desarrollar un sistema capaz de adquirir y monitorear la señal respiratoria con la menor interferencia posible.
 
 <img width="732" height="732" alt="image" src="https://github.com/user-attachments/assets/7e24a0ed-e56e-456e-853e-157eb8601979" />
+
 **Imagen 1** *sensor de fuerza resistivo FSR402 tomado de: https://www.zamux.co/sensor-de-fuerza-resistivo-fsr402*
 
 
