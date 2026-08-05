@@ -8,13 +8,15 @@ La ventilación pulmonar corresponde al movimiento de aire entre la atmósfera y
 
 Desde el punto de vista mecánico, la ventilación depende de la interacción entre las propiedades elásticas del pulmón, la resistencia de las vías respiratorias y el trabajo realizado por los músculos respiratorios. Kreit y Eschenbacher describen que la ventilación espontánea representa un equilibrio entre la presión generada por la musculatura respiratoria y las fuerzas elásticas del sistema respiratorio, mientras que cualquier alteración en estos componentes modifica la eficiencia del intercambio gaseoso.
 
-**Intercambio Gaseoso**::
+**Intercambio Gaseoso**:
 
 Una vez que el aire alcanza los alvéolos pulmonares, ocurre el intercambio de gases entre el aire alveolar y la sangre de los capilares pulmonares. Este proceso se lleva a cabo por difusión pasiva y está gobernado por la Ley de Fick, la cual establece que la velocidad de difusión depende del área disponible para el intercambio, del espesor de la membrana alveolocapilar, del coeficiente de difusión del gas y del gradiente de presión parcial existente entre ambos compartimentos.
 
 El oxígeno difunde desde los alvéolos hacia la sangre debido a que su presión parcial es mayor en el aire alveolar que en la sangre venosa, mientras que el dióxido de carbono sigue el gradiente opuesto para ser eliminado durante la espiración. Aunque el CO₂ posee un gradiente de presión menor, su elevada capacidad de difusión permite que el intercambio ocurra de manera eficiente. Diversos estudios publicados en PubMed señalan que alteraciones en cualquiera de estas variables físicas disminuyen significativamente la eficiencia respiratoria y favorecen la aparición de insuficiencia respiratoria.
 
-**Variables físicas utilizadas en el proceso gaseoso**
+**Variables físicas utilizadas en el proceso gaseoso**:
+
+
 El proceso respiratorio depende de múltiples variables físicas que determinan la eficiencia de la ventilación y del intercambio gaseoso. La primera de ellas es la presión, considerada el principal motor del movimiento del aire. Las diferencias entre la presión atmosférica, la presión alveolar y la presión intrapleural generan los gradientes necesarios para que el aire entre o salga de los pulmones. Sin estos gradientes de presión no sería posible la ventilación.
 
 Otra variable fundamental es el volumen pulmonar, el cual representa la cantidad de aire contenida en los pulmones durante las diferentes fases de la respiración. Entre los parámetros más utilizados se encuentran el volumen corriente, el volumen residual y las capacidades pulmonares, las cuales son ampliamente empleadas para evaluar la función respiratoria mediante pruebas como la espirometría.
@@ -25,5 +27,7 @@ Igualmente importante es la distensibilidad pulmonar (compliance), definida como
 
 Finalmente, las presiones parciales de oxígeno y dióxido de carbono, junto con la relación ventilación/perfusión (V/Q), representan variables indispensables para mantener un intercambio gaseoso eficiente. Una adecuada correspondencia entre la ventilación alveolar y el flujo sanguíneo pulmonar optimiza la oxigenación de la sangre y la eliminación del dióxido de carbono. Diversas revisiones recientes destacan que el análisis conjunto de la presión, el flujo, el volumen y la resistencia constituye la base del diseño de ventiladores mecánicos y de otros sistemas biomédicos utilizados en el soporte respiratorio.
 
-**Regulación del proceso respiratorio**
+**Regulación del proceso respiratorio**:
+
+
 La respiración está regulada por centros nerviosos ubicados en el bulbo raquídeo y la protuberancia, los cuales ajustan continuamente la frecuencia y la profundidad respiratoria según las necesidades metabólicas del organismo. Estos centros reciben información proveniente de quimiorreceptores centrales y periféricos que responden principalmente a cambios en la presión parcial de dióxido de carbono, la presión parcial de oxígeno y el pH sanguíneo. Cuando aumenta la concentración de CO₂ o disminuye el pH, el sistema nervioso incrementa la ventilación para restablecer el equilibrio fisiológico. Estudios recientes indican que el desarrollo de la insuficiencia respiratoria ocurre cuando existe un desequilibrio entre la carga mecánica del sistema respiratorio y la capacidad de los músculos respiratorios para generar la presión necesaria para la ventilación.
