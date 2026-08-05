@@ -45,9 +45,26 @@ En consecuencia, este proporcionó una señal respiratoria más estable y repres
 **Imagen 1** *sensor de fuerza resistivo FSR402 tomado de: https://www.zamux.co/sensor-de-fuerza-resistivo-fsr402*
 
 
-# Diseño del sistema
-Aquí se coloca sobre qué se hizo del diseño sobre el divisor de voltaje por las mismas razones que se iba a hacer el puente de WIgnstone y se decicidió hacer el divvisor por facilidad, se usó como microcontrlador el NI DAQ MX para capturar la señal y convertirla de Análoga a Digital para continuar procesandola y con ello mirar el comportamiento de la señal de respiración y sus componentes.
-(Foto NIDAQ y foto del simulador de divisdor de volktajw)
+# 3) Diseño del sistema
+
+Con relación al diseño del sistema, inicialmente se planteó implementar un puente de Wheatstone con el fin de acondicionar la señal proveniente del sensor resistivo. Sin embargo, debido a la simplicidad del montaje y a que el sensor resistivo no posee una polaridad definida, se optó por utilizar un divisor de voltaje, el cual permitía obtener una variación de tensión proporcional a los cambios de resistencia del sensor.
+
+Para el diseño del divisor de voltaje, primero se midió la resistencia del sensor utilizando un multímetro, obteniéndose un valor aproximado de 220 Ω. Con base en esta medición, se seleccionó una resistencia fija de 220 Ω para conformar el divisor, con el fin de obtener un punto de operación adecuado y maximizar la sensibilidad del circuito frente a las variaciones producidas por la respiración.
+
+Posteriormente, para la adquisición de la señal se empleó el microcontrolador NI DAQmx, encargado de capturar la señal analógica generada por el divisor de voltaje y convertirla al dominio digital, una vez digitalizada la señal pudo ser procesada y analizada en el computador, permitiendo observar el comportamiento del patrón respiratorio y calcular la frecuencia respiratoria durante las dos diferentes condiciones evaluadas.
+
+
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/1ebef4ae-e72b-406a-ab9a-502729053fc4" />
+
+**Imagen 2** *Microcontrolador NI DAQMx tomado de: https://www.digikey.com/en/products/detail/ni/782602-01/12817647*
+
+
+<img width="555" height="312" alt="image" src="https://github.com/user-attachments/assets/1836559d-9071-4441-9362-f7c04407cbf6" />
+
+**Imagen 3** *Microcontrolador NI DAQMx tomado de: Elaboración propia. Prieto, Marya
+
+
+
 
 # Foto donde se esté colocando a una persona y plotter de las señales, imagenes de losdos resultados
 
