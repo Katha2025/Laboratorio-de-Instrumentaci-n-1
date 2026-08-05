@@ -40,7 +40,7 @@ Para la selección del sensor se evaluaron diferentes alternativas con el fin de
 
 En consecuencia, este proporcionó una señal respiratoria más estable y representativa, facilitando la obtención de la frecuencia respiratoria y el análisis del patrón respiratorio requerido en la práctica. 
 
-<img width="732" height="732" alt="image" src="https://github.com/user-attachments/assets/7e24a0ed-e56e-456e-853e-157eb8601979" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/7e24a0ed-e56e-456e-853e-157eb8601979" />
 
 **Imagen 1** *sensor de fuerza resistivo FSR402.*
 
