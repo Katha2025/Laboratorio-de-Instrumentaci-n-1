@@ -36,7 +36,7 @@ La respiración está regulada por centros nerviosos ubicados en el bulbo raquí
 
 Para la selección del sensor se evaluaron diferentes alternativas con el fin de identificar la que ofreciera un mejor desempeño para el monitoreo del patrón respiratorio durante la práctica de laboratorio, entre las opciones consideradas se encontraban el sensor de fuerza resistivo FSR402 y el sensor MQ-2. Tras comparar las características de ambos dispositivos, se optó por el sensor de fuerza resistivo, debido a que permite detectar las variaciones mecánicas producidas por la expansión y contracción del tórax durante la respiración de forma más precisa. Además, este sensor ofrece una adaptación más ergonómica al cuerpo del sujeto, disminuyendo las molestias durante la adquisición de la señal y reduciendo la posibilidad de interferencias ocasionadas por movimientos indeseados.
 
-En consecuencia, la galga extensiométrica proporcionó una señal respiratoria más estable y representativa, facilitando la obtención de la frecuencia respiratoria y el análisis del patrón respiratorio requerido en la práctica. Esta elección es consistente con el objetivo del laboratorio de desarrollar un sistema capaz de adquirir y monitorear la señal respiratoria con la menor interferencia posible.
+En consecuencia, este proporcionó una señal respiratoria más estable y representativa, facilitando la obtención de la frecuencia respiratoria y el análisis del patrón respiratorio requerido en la práctica. 
 
 <img width="732" height="732" alt="image" src="https://github.com/user-attachments/assets/7e24a0ed-e56e-456e-853e-157eb8601979" />
 
