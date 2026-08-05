@@ -71,7 +71,7 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 
 
 
-# 4) Montaje y prueba del sensor
+# 4) Montaje y prueba del sensor (Foto)
 
 
 
