@@ -56,7 +56,7 @@ Para el diseño del divisor de voltaje, primero se midió la resistencia del sen
 Posteriormente, para la adquisición de la señal se empleó el microcontrolador NI DAQmx, encargado de capturar la señal analógica generada por el divisor de voltaje y convertirla al dominio digital, una vez digitalizada la señal pudo ser procesada y analizada en el computador, permitiendo observar el comportamiento del patrón respiratorio y calcular la frecuencia respiratoria durante las dos diferentes condiciones evaluadas.
 
 
-<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/1ebef4ae-e72b-406a-ab9a-502729053fc4" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/1ebef4ae-e72b-406a-ab9a-502729053fc4" />
 
 **Imagen 2** *Microcontrolador NI DAQMx.*
 
