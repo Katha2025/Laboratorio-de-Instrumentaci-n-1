@@ -67,12 +67,15 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 
 **Imagen 3** *Circuito del divisor de voltaje*
 
-*Tomado de: Elaboración propia. Prieto, Marya*
+*Tomado de: Elaboración propia*
 
 
 
+# 4) Montaje y prueba del sensor
 
-# Foto donde se esté colocando a una persona y plotter de las señales, imagenes de losdos resultados
+
+
+# 5)Foto donde se esté colocando a una persona y plotter de las señales, imagenes de losdos resultados
 
 ## Parte B
 
