@@ -1,6 +1,6 @@
 # Laboratorio-de Instrumentación 1
 ## Parte A
-#1. Revisión de la literatura
+# 1. Revisión de la literatura
 
 El proceso respiratorio constituye una de las funciones fisiológicas más importantes del organismo ya que permite el intercambio continuo de oxígeno (O₂) y dióxido de carbono (CO₂) entre el medio ambiente y los tejidos. Este proceso asegura el suministro de oxígeno necesario para la respiración celular y la producción de ATP, al mismo tiempo que elimina el dióxido de carbono generado por el metabolismo. Según Hall y Hall (2021), la respiración comprende una serie de eventos coordinados que incluyen la ventilación pulmonar, el intercambio gaseoso, el transporte de gases por la sangre y la respiración tisular. Desde el punto de vista de la ingeniería biomédica y de la fisiología, estos mecanismos están gobernados por principios físicos como la dinámica de fluidos, las leyes de los gases, la elasticidad de los tejidos y los fenómenos de difusión. Estudios recientes publicados en PubMed resaltan que comprender estas variables físicas es fundamental para el desarrollo de dispositivos de soporte ventilatorio, sistemas de monitoreo respiratorio y modelos fisiológicos aplicados al diagnóstico clínico.
 
