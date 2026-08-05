@@ -83,7 +83,9 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 2. fRECUENCIAS
 
 # Parte C
+# Procedimiento
 # Análisis de los Resultados
+# Conclusiones
 
 
 ## PREGUNTAS A DISCUSIÓN
