@@ -85,7 +85,7 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 # Parte C
 # Procedimiento
 # Análisis de los Resultados
-# Conclusiones
+# Conclusión
 
 
 ## PREGUNTAS A DISCUSIÓN
