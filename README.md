@@ -31,3 +31,26 @@ Finalmente, las presiones parciales de oxígeno y dióxido de carbono, junto con
 
 
 La respiración está regulada por centros nerviosos ubicados en el bulbo raquídeo y la protuberancia, los cuales ajustan continuamente la frecuencia y la profundidad respiratoria según las necesidades metabólicas del organismo. Estos centros reciben información proveniente de quimiorreceptores centrales y periféricos que responden principalmente a cambios en la presión parcial de dióxido de carbono, la presión parcial de oxígeno y el pH sanguíneo. Cuando aumenta la concentración de CO₂ o disminuye el pH, el sistema nervioso incrementa la ventilación para restablecer el equilibrio fisiológico. Estudios recientes indican que el desarrollo de la insuficiencia respiratoria ocurre cuando existe un desequilibrio entre la carga mecánica del sistema respiratorio y la capacidad de los músculos respiratorios para generar la presión necesaria para la ventilación.
+
+# Selección de sensor
+En las elección de nuestro sensor tuvimos en cuenta algunos parámetros para poder elegir el correcto que se adapatara a nuestro laboratorio, entre los candidatos que se tenían se encontraban la galga extensiométrica y el sensor MQ010. Se eligió la galga ya que esta nos permitía detectar las respiraciones con más precisión y de manera más ergonómica lo que nos brindaba una mayor facilidad al momento de tomar la lectura de la señal fisiológica.
+
+# Diseño del sistema
+Aquí se coloca sobre qué se hizo del diseño sobre el divisor de voltaje por las mismas razones que se iba a hacer el puente de WIgnstone y se decicidió hacer el divvisor por facilidad, se usó como microcontrlador el NI DAQ MX para capturar la señal y convertirla de Análoga a Digital para continuar procesandola y con ello mirar el comportamiento de la señal de respiración y sus componentes.
+(Foto NIDAQ y foto del simulador de divisdor de volktajw)
+
+# Foto donde se esté colocando a una persona y plotter de las señales, imagenes de losdos resultados
+
+## Parte B
+
+1. cÓDIGO DE MATLAB
+2. fRECUENCIAS
+
+
+## PREGUNTAS A DISCUSIÓN
+• Pregunta 1: ¿Son los patrones respiratorios y frecuencias respiratorias
+iguales o diferentes en cada caso? ¿A qué se debe esto?
+• Pregunta 2: ¿Cuáles serían las ventajas y desventajas de emplear múltiples
+sensores para el monitoreo del proceso respiratorio? ¿Cuáles podrían ser
+las razones?
+
