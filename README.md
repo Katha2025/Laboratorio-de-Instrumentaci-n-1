@@ -82,6 +82,8 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 1. cÓDIGO DE MATLAB
 2. fRECUENCIAS
 
+## Parte C
+
 
 ## PREGUNTAS A DISCUSIÓN
 • Pregunta 1: ¿Son los patrones respiratorios y frecuencias respiratorias
