@@ -89,9 +89,12 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 
 
 ## PREGUNTAS A DISCUSIÓN
-• Pregunta 1: ¿Son los patrones respiratorios y frecuencias respiratorias
-iguales o diferentes en cada caso? ¿A qué se debe esto?
-• Pregunta 2: ¿Cuáles serían las ventajas y desventajas de emplear múltiples
+
+• **Pregunta 1: ¿Son los patrones respiratorios y frecuencias respiratorias
+iguales o diferentes en cada caso? ¿A qué se debe esto?**
+
+
+• **Pregunta 2: ¿Cuáles serían las ventajas y desventajas de emplear múltiples
 sensores para el monitoreo del proceso respiratorio? ¿Cuáles podrían ser
-las razones?
+las razones?**
 
