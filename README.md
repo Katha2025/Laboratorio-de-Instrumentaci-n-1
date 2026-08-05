@@ -1,1 +1,2 @@
-# Laboratorio-de-Instrumentación-1
+# Laboratorio-de Instrumentación 1
+## Parte A
