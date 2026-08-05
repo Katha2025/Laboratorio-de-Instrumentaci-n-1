@@ -77,12 +77,12 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 
 # 5) Adquisición de la señal respiratoria
 
-## Parte B
+# Parte B
 
 1. cÓDIGO DE MATLAB
 2. fRECUENCIAS
 
-## Parte C
+# Parte C
 # Análisis de los Resultados
 
 
