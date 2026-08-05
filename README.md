@@ -75,7 +75,7 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 
 
 
-# 5)Foto donde se esté colocando a una persona y plotter de las señales, imagenes de losdos resultados
+# 5) Adquisición de la señal respiratoria
 
 ## Parte B
 
