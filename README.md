@@ -1,1 +1,1 @@
-# Laboratorio-de-Instrumentaci-n-1
+# Laboratorio-de-Instrumentación-1
