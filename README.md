@@ -173,7 +173,10 @@ Y luego para la persona que lee en voz alta:
 3. FRECUENCIAS
 
 # Parte C
-Al notar que las señales contenían ruido de una frecuencia más alta, se utilizó un filtro pasa bajos para limpiar la señal , el filtro limpia a 1 Hz, como se ve en el siguiente código:
+
+Al notar la presencia de ruido en la señal, se implementó un filtro pasa-bajas Butterworth con una frecuencia de corte de 1 Hz, debido a que la señal respiratoria se concentra principalmente en el intervalo de 0,1 a 0,5 Hz [7].
+La selección de una frecuencia de corte ligeramente superior al rango respiratorio permite conservar la morfología de la señal y sus variaciones fisiológicas, mientras se atenúan componentes de alta frecuencia asociadas al ruido eléctrico, vibraciones y movimientos indeseados del sensor. De esta manera, se obtiene una señal más limpia sin afectar significativamente la información correspondiente a los ciclos de inspiración y espiración.
+
 
 ``` matlab
 
@@ -357,3 +360,5 @@ las razones?**
 [5] Adler, D., & Janssens, J. P. (2019). The Pathophysiology of Respiratory Failure: Control of Breathing, Respiratory Load, and Muscle Capacity. Respiration, 97(2), 93–104. https://doi.org/10.1159/000494063.
 
 [6] Interlink Electronics, FSR 400 Series Integration Guide. Camarillo, CA, USA: Interlink Electronics. [Online]. Available: https://www.interlinkelectronics.com/downloads/integration-guides/fsr-400-series-integration-guide.pdf.
+
+[7] Equimed, “La frecuencia respiratoria: qué es, cómo controlarla y equipos para monitorearla,” 29 de julio de 2022. [En línea]. Disponible en: https://equimed.es/la-frecuencia-respiratoria-que-es-como-controlarla-y-equipos-para-monitorearla/
