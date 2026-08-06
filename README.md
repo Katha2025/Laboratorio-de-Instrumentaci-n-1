@@ -274,6 +274,12 @@ fprintf('\nFiltrado terminado.\n');
 fprintf('Archivo guardado: respiracion_filtrada.mat\n');
 
 ```
+
+Dando como resultado las siguientes señales:
+- <img width="1108" height="742" alt="image" src="https://github.com/user-attachments/assets/a309b365-8a60-4839-935d-6c8276184c76" />
+
+- <img width="1108" height="742" alt="image" src="https://github.com/user-attachments/assets/e971122a-6897-47c2-96ca-aebff9756d16" />
+
 # Procedimiento
 # Análisis de los Resultados
 # Conclusión
