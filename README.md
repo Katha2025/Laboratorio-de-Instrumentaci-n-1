@@ -87,7 +87,7 @@ Para empezar con la adquisición de la señal a partir del circuito antes hablad
 # 5) Adquisición de la señal respiratoria (Foto Plotter)
 
 # Parte B
-1. cÓDIGO DE MATLAB
+1. Código de matlab
    Para poder adquirir las señales se utilizó este código de matlab
    
 ``` matlab
@@ -143,7 +143,7 @@ Y luego para la persona que lee en voz alta:
 
 
      
-3. fRECUENCIAS
+3. FRECUENCIAS
 
 # Parte C
 Al notar que las señales contenían ruido de una frecuencia más alta se utilizó un filtro pasa bajos para limpiar la señal , el filtro limpia a 1 Hz, como se ve en el siguiente codigo:
