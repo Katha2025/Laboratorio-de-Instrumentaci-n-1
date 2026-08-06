@@ -78,8 +78,11 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 # 5) Adquisición de la señal respiratoria (Foto Plotter)
 
 # Parte B
+Para empezar con la adquisición de la señal a partir del circuito antes hablado se uso el programa base que utiiza la DAQ para poder visualizar la señl antes de capturarla
 
 1. cÓDIGO DE MATLAB
+
+     
 2. fRECUENCIAS
 
 # Parte C
