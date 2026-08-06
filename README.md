@@ -79,17 +79,17 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 
 
 
-# 5) Adquisición de la señal respiratoria (Foto Plotter)
+# 5) Adquisición de la señal respiratoria 
 
 Para empezar con la adquisición de la señal a partir del circuito antes hablado se uso el programa base NI-MAX que utiliza la DAQ para poder visualizar la señal antes de capturarla:
 
 - Primero se visualizó con el sujeto respirando normal:
   
-  <img width="1281" height="736" alt="image" src="https://github.com/user-attachments/assets/966073e9-0d07-426e-8451-58ce8d1be8fd" />
+ <img width="400" alt="image" src="https://github.com/user-attachments/assets/966073e9-0d07-426e-8451-58ce8d1be8fd" />
 
 - Luego , el participante se puso a leer en voz alta :
   
-  <img width="763" height="435" alt="image" src="https://github.com/user-attachments/assets/489020ea-3772-42ff-bf86-07de40a1bc76" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/489020ea-3772-42ff-bf86-07de40a1bc76" />
   
 # Parte B
 1. Código de matlab
