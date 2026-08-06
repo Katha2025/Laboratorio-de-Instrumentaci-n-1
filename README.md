@@ -77,18 +77,203 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 # 4) Montaje y prueba del sensor (Foto)
 
 Para empezar con la adquisición de la señal a partir del circuito antes hablado se uso el programa base NI-MAX que utiliza la DAQ para poder visualizar la señal antes de capturarla:
-- Primero se visualizó con el sujeto respirando normal
+- Primero se visualizó con el sujeto respirando normal:
+  <img width="1281" height="736" alt="image" src="https://github.com/user-attachments/assets/966073e9-0d07-426e-8451-58ce8d1be8fd" />
+
 - Luego , el participante se puso a leer en voz alta :
+  <img width="763" height="435" alt="image" src="https://github.com/user-attachments/assets/489020ea-3772-42ff-bf86-07de40a1bc76" />
+
 
 # 5) Adquisición de la señal respiratoria (Foto Plotter)
 
 # Parte B
 1. cÓDIGO DE MATLAB
+   Para poder adquirir las señales se utilizó este código de matlab
+   
+``` matlab
+clear;
+clc;
+close all;
+
+dq = daq("ni");
+addinput(dq, "Dev8", "ai0", "Voltage");
+
+dq.Rate = 100;    % Frecuencia de muestreo en Hz
+duracion = 30;    % Tiempo de adquisición en segundos
+
+disp("Iniciando captura de 30 segundos...");
+
+datos = read(dq, seconds(duracion), OutputFormat="Timetable");
+
+disp("Captura finalizada.");
+
+tiempo = seconds(datos.Time);
+voltaje = datos{:,1};
+figure;
+
+plot(tiempo, voltaje, "LineWidth", 1);
+
+title("Señal respiratoria sin filtrar");
+xlabel("Tiempo (s)");
+ylabel("Voltaje (V)");
+
+grid on;
+xlim([0 duracion]);
+
+ylim([0 5]);    
+
+%Para guardar el archivo
+fecha = string(datetime("now", ...
+    "Format","yyyy-MM-dd_HH-mm-ss"));
+
+nombreArchivo = "respiracion_" + fecha + ".mat";
+
+save(nombreArchivo, "datos");
+
+disp("Archivo guardado como:");
+disp(nombreArchivo);
+
+```
+Dando como resultado:
+Primero para la persona respirando tranquilamente:
+<img width="1600" height="755" alt="WhatsApp Image 2026-08-05 at 12 46 28 PM" src="https://github.com/user-attachments/assets/85d3cf66-9400-4652-bcb0-49545a4f985f" /> 
+Y luego para la persona que lee en voz alta:
+<img width="1600" height="755" alt="image" src="https://github.com/user-attachments/assets/7082ee5a-e454-44d6-97e3-67e0606142f4" />
+
+
 
      
-2. fRECUENCIAS
+3. fRECUENCIAS
 
 # Parte C
+Al notar que las señales contenían ruido de una frecuencia más alta se utilizó un filtro pasa bajos para limpiar la señal , el filtro limpia a 1 Hz, como se ve en el siguiente codigo:
+
+``` matlab
+
+clear;
+clc;
+close all;
+
+archivo = 'respiracion_2026-08-05_12-52-55.mat';
+
+S = load(archivo);
+datos = S.datos;
+
+disp('Variables encontradas en el archivo:');
+disp(datos.Properties.VariableNames);
+
+
+senal = double(datos{:,1});
+tiempoOriginal = datos.Properties.RowTimes;
+tiempo = seconds(tiempoOriginal - tiempoOriginal(1));
+validos = isfinite(tiempo) & isfinite(senal);
+
+tiempo = tiempo(validos);
+senal = senal(validos);
+
+senal = fillmissing(senal, 'linear');
+
+
+dt = median(diff(tiempo));
+fs = 1 / dt;
+
+fprintf('Frecuencia de muestreo: %.2f Hz\n', fs);
+fprintf('Duración de la señal: %.2f segundos\n', tiempo(end));
+
+
+diferencias = diff(tiempo);
+
+if max(abs(diferencias - dt)) > 0.05 * dt
+
+    disp('El tiempo no es completamente uniforme.');
+    disp('Se realizará una interpolación.');
+
+    tiempoUniforme = (tiempo(1):dt:tiempo(end))';
+
+    senal = interp1( ...
+        tiempo, ...
+        senal, ...
+        tiempoUniforme, ...
+        'pchip');
+
+    tiempo = tiempoUniforme;
+end
+
+%filtro pasa bajos
+fc = 1;
+
+orden = 4;
+
+if fc >= fs/2
+    error(['La frecuencia de corte debe ser menor que fs/2. ', ...
+           'Frecuencia de muestreo calculada: %.2f Hz'], fs);
+end
+
+Wn = fc / (fs/2);
+[b, a] = butter(orden, Wn, 'low');
+senalFiltrada = filtfilt(b, a, senal);
+
+% graficar
+figure('Name', 'Señal respiratoria', ...
+       'NumberTitle', 'off', ...
+       'Color', 'white');
+
+tiledlayout(2,1, 'TileSpacing', 'compact');
+
+% Señal original
+nexttile;
+
+plot(tiempo, senal, 'LineWidth', 0.7);
+
+title('Señal respiratoria sin filtrar');
+xlabel('Tiempo (s)');
+ylabel('Voltaje (V)');
+
+grid on;
+xlim([tiempo(1), tiempo(end)]);
+
+% Señal filtrada
+nexttile;
+
+plot(tiempo, senalFiltrada, 'LineWidth', 2);
+
+title(sprintf( ...
+    'Señal respiratoria filtrada — Butterworth de %.1f Hz', fc));
+
+xlabel('Tiempo (s)');
+ylabel('Voltaje (V)');
+
+grid on;
+xlim([tiempo(1), tiempo(end)]);
+
+minimo = min(senalFiltrada);
+maximo = max(senalFiltrada);
+margen = 0.10 * (maximo - minimo);
+
+if margen > 0
+    ylim([minimo - margen, maximo + margen]);
+end
+
+% guardar la señal filtrada
+
+tiemposGuardados = seconds(tiempo);
+
+datosFiltrados = timetable( ...
+    tiemposGuardados, ...
+    senal, ...
+    senalFiltrada, ...
+    'VariableNames', {'Original', 'Filtrada'});
+
+save( ...
+    'respiracion_filtrada.mat', ...
+    'datosFiltrados', ...
+    'fs', ...
+    'fc');
+
+fprintf('\nFiltrado terminado.\n');
+fprintf('Archivo guardado: respiracion_filtrada.mat\n');
+
+```
 # Procedimiento
 # Análisis de los Resultados
 # Conclusión
