@@ -38,6 +38,9 @@ La respiración está regulada por centros nerviosos ubicados en el bulbo raquí
 
 Para la selección del sensor se evaluaron diferentes alternativas con el fin de identificar la que ofreciera un mejor desempeño para el monitoreo del patrón respiratorio durante la práctica de laboratorio, entre las opciones consideradas se encontraban el sensor de fuerza resistivo FSR402 y el sensor MQ-2. Tras comparar las características de ambos dispositivos, se optó por el sensor de fuerza resistivo, debido a que permite detectar las variaciones mecánicas producidas por la expansión y contracción del tórax durante la respiración de forma más precisa. Además, este sensor ofrece una adaptación más ergonómica al cuerpo del sujeto, disminuyendo las molestias durante la adquisición de la señal y reduciendo la posibilidad de interferencias ocasionadas por movimientos indeseados.
 
+El FSR402 funciona mediante un principio piezorresistivo, en el cual la resistencia eléctrica del material cambia cuando se aplica una fuerza o presión sobre su superficie. Cuando el tórax se expande durante la inspiración, la banda ejerce una mayor presión sobre el sensor, provocando una disminución de su resistencia. Durante la espiración, la presión disminuye y la resistencia vuelve a aumentar. Estas variaciones de resistencia pueden convertirse en cambios de voltaje mediante un circuito divisor de tensión, permitiendo obtener una señal eléctrica relacionada con los movimientos respiratorios del sujeto.
+
+
 En consecuencia, este proporcionó una señal respiratoria más estable y representativa, facilitando la obtención de la frecuencia respiratoria y el análisis del patrón respiratorio requerido en la práctica. 
 
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/7e24a0ed-e56e-456e-853e-157eb8601979" />
