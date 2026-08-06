@@ -101,6 +101,9 @@ las razones?**
 ## Referencias
 
 [1] Kreit, J. W., & Eschenbacher, W. L. (1988). The Physiology of Spontaneous and Mechanical Ventilation. Clinics in Chest Medicine, 9(1), 11–21.
-[2] “Intercambio gaseoso: qué es y definición médica | Diccionario CUN,” https://www.cun.es. https://www.cun.es/diccionario-medico/terminos/intercambio-gaseoso
+
+[2] “Intercambio gaseoso: qué es y definición médica | Diccionario CUN,” https://www.cun.es. https://www.cun.es/diccionario-medico/terminos/intercambio-gaseoso.
+
 [3] Pleil, J. D., Wallace, M. A. G., & Davis, M. D. (2021). The physics of human breathing: flow, timing, volume, and pressure parameters for normal, on-demand, and ventilator respiration. Journal of Breath Research, 15(4).
-[4] Adler, D., & Janssens, J. P. (2019). The Pathophysiology of Respiratory Failure: Control of Breathing, Respiratory Load, and Muscle Capacity. Respiration, 97(2), 93–104. https://doi.org/10.1159/000494063
+
+[4] Adler, D., & Janssens, J. P. (2019). The Pathophysiology of Respiratory Failure: Control of Breathing, Respiratory Load, and Muscle Capacity. Respiration, 97(2), 93–104. https://doi.org/10.1159/000494063.
