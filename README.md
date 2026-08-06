@@ -153,7 +153,7 @@ Primero para la persona respirando tranquilamente:
 
 <img width="400" alt="WhatsApp Image 2026-08-05 at 12 46 28 PM" src="https://github.com/user-attachments/assets/85d3cf66-9400-4652-bcb0-49545a4f985f" />
 
-**Imagen 7.** *Circuito del divisor de voltaje.*
+**Imagen 7.** *Señal de respiración tranquila capturada en matlab sin filtrar.*
 
 *Tomado de: Elaboración propia*
 
@@ -163,7 +163,7 @@ Y luego para la persona que lee en voz alta:
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/7082ee5a-e454-44d6-97e3-67e0606142f4" />
 
-**Imagen 8.** *Circuito del divisor de voltaje.*
+**Imagen 8.** *Señal de respiración mientras se lee en voz alta capturada en matlab sin filtrar.*
 
 *Tomado de: Elaboración propia*
 
@@ -305,13 +305,13 @@ fprintf('Archivo guardado: respiracion_filtrada.mat\n');
 Dando como resultado las siguientes señales:
 - <img width="400" alt="image" src="https://github.com/user-attachments/assets/a309b365-8a60-4839-935d-6c8276184c76" />
 
-**Imagen 9.** *Señal de respiración tranquila de prueba en NI-MAX.*
+**Imagen 9.** *Señal de respiración tranquila después de filtrarla*
 
 *Tomado de: Elaboración propia*
 
 - <img width="400" alt="image" src="https://github.com/user-attachments/assets/e971122a-6897-47c2-96ca-aebff9756d16" />
 
-**Imagen 10.** *Señal de respiración mientras lee en voz alta de prueba en NI-MAX.*
+**Imagen 10.** *Señal de respiración mientras lee en voz alta después de filtrarla*
 
 *Tomado de: Elaboración propia*
 
