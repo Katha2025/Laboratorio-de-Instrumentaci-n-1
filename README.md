@@ -328,10 +328,11 @@ Dando como resultado las siguientes señales:
 
 4. Al construir el circuito, se comprobó que la señal de salida fuera correcta a través de los paneles de prueba dados por el software de NI MAX. Se hizo la prueba en dos estados, cuando el sujeto de prueba estuviera relajado y cuando el sujeto de prueba estuviera hablando. Dado que sus resultados fueron satisfactorios, se continuó con la práctica.
 
-5. Después, se elaboró un código de MATLAB que pudiera capturar la señal respiratoria en 30 segundos, graficarla y guardarla como un archivo “.MAT”. Se utilizó una frecuencia de muestreo de 100 Hz. Nuevamente, se adquirió la señal en dos estados, en reposo y cuando el sujeto estuviera hablando. Al obtener los resultados, se evidenció la necesidad de aplicar un filtro Butterworth con frecuencia de corte de 1.0 Hz *a partir de los cálculos realizados*. 
+5. Después, se elaboró un código de MATLAB que pudiera capturar la señal respiratoria en 30 segundos, graficarla y guardarla como un archivo “.MAT”. Se utilizó una frecuencia de muestreo de 100 Hz. Nuevamente, se adquirió la señal en dos estados, en reposo y cuando el sujeto estuviera hablando. Al obtener los resultados, se evidenció la necesidad de aplicar un filtro Butterworth con frecuencia de corte de 1.0 Hz.  
 
-6. El filtro se aplicó por medio de un código de MATLAB. Una vez se obtuvo una señal más legible, se calcularon las frecuencias de ambas señales y se identificó la frecuencia dominante en cada caso. A partir de esto se realizó una representación en frecuencia para cada caso.
-Para finalizar, se creó un repositorio de GitHub para documentar los resultados de la práctica y sus análisis.
+6. El filtro se aplicó por medio de un código de MATLAB. Una vez se obtuvo una señal más legible, se calcularon las frecuencias de ambas señales y se realizó una representación en frecuencia para cada caso. Con esto se pudo identificar la frecuencia dominante en ambas situaciones. Debido a las propiedades del sensor piezorresistivo, la señal capturada se encuentra invertida, por lo cuál fue necesario multiplicarla por (-1) para que representara de manera más precisa el proceso respiratorio.
+
+7. Para finalizar, se analizaron y se compararon las respuesta. A partir de esto se creó un repositorio de GitHub para documentar los resultados de la práctica.
 
 
 # Análisis de los Resultados
