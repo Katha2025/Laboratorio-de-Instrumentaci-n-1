@@ -316,6 +316,21 @@ Dando como resultado las siguientes señales:
 *Tomado de: Elaboración propia*
 
 # Procedimiento
+
+1. Para iniciar, se hizo una revisión de literatura acerca del proceso respiratorio para poder comprender qué señales se necesitaban medir y que significan las variables físicas involucradas en el proceso. 
+
+2. A partir de esta información, se seleccionó el sensor más adecuado para el propósito de esta práctica, el cuál fue un sensor de fuerza resistivo FSR402. Al elegir dicho sensor, se investigó cómo condicionar la señal para poder capturarla a través de un conversor análogo-digital donde se concluyó que el circuito mejor adaptado para esta práctica de laboratorio es un divisor de voltaje. Asimismo, se consideraron diferentes conversores análogos digitales para observar cuales se podían integrar al  montaje con más facilidad, el cual en este caso fue un dispositivo NI-DAQMx.
+
+3. Continuando, al conocer cómo se necesitaba condicionar el sensor, se diseñó un montaje donde el sensor se podía adaptar al cuerpo del sujeto de prueba, se podía conectar al circuito de acondicionamiento y su salida fuera leída por el conversor análogo digital el cual mostraría los resultados en un computador. Se alimentó el circuito con una tensión de 5V.
+
+4. Al construir el circuito, se comprobó que la señal de salida fuera correcta a través de los paneles de prueba dados por el software de NI MAX. Se hizo la prueba en dos estados, cuando el sujeto de prueba estuviera relajado y cuando el sujeto de prueba estuviera hablando. Dado que sus resultados fueron satisfactorios, se continuó con la práctica.
+
+5. Después, se elaboró un código de MATLAB que pudiera capturar la señal respiratoria en 30 segundos, graficarla y guardarla como un archivo “.MAT”. Se utilizó una frecuencia de muestreo de 100 Hz. Nuevamente, se adquirió la señal en dos estados, en reposo y cuando el sujeto estuviera hablando. Al obtener los resultados, se evidenció la necesidad de aplicar un filtro Butterworth con frecuencia de corte de 1.0 Hz *a partir de los cálculos realizados*. 
+
+6. El filtro se aplicó por medio de un código de MATLAB. Una vez se obtuvo una señal más legible, se calcularon las frecuencias de ambas señales y se identificó la frecuencia dominante en cada caso. A partir de esto se realizó una representación en frecuencia para cada caso.
+Para finalizar, se creó un repositorio de GitHub para documentar los resultados de la práctica y sus análisis.
+
+
 # Análisis de los Resultados
 # Conclusión
 
