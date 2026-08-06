@@ -87,9 +87,17 @@ Para empezar con la adquisición de la señal a partir del circuito antes hablad
   
  <img width="400" alt="image" src="https://github.com/user-attachments/assets/966073e9-0d07-426e-8451-58ce8d1be8fd" />
 
+ **Imagen 5.** *Circuito del divisor de voltaje.*
+
+*Tomado de: Elaboración propia*
+
 - Luego , el participante se puso a leer en voz alta :
   
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/489020ea-3772-42ff-bf86-07de40a1bc76" />
+
+**Imagen 6.** *Circuito del divisor de voltaje.*
+
+*Tomado de: Elaboración propia*
   
 # Parte B
 1. Código de matlab
@@ -145,11 +153,19 @@ Primero para la persona respirando tranquilamente:
 
 <img width="400" alt="WhatsApp Image 2026-08-05 at 12 46 28 PM" src="https://github.com/user-attachments/assets/85d3cf66-9400-4652-bcb0-49545a4f985f" />
 
+**Imagen 7.** *Circuito del divisor de voltaje.*
+
+*Tomado de: Elaboración propia*
+
 
 Y luego para la persona que lee en voz alta:
 
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/7082ee5a-e454-44d6-97e3-67e0606142f4" />
+
+**Imagen 8.** *Circuito del divisor de voltaje.*
+
+*Tomado de: Elaboración propia*
 
 
 
@@ -289,7 +305,15 @@ fprintf('Archivo guardado: respiracion_filtrada.mat\n');
 Dando como resultado las siguientes señales:
 - <img width="400" alt="image" src="https://github.com/user-attachments/assets/a309b365-8a60-4839-935d-6c8276184c76" />
 
+**Imagen 9.** *Circuito del divisor de voltaje.*
+
+*Tomado de: Elaboración propia*
+
 - <img width="400" alt="image" src="https://github.com/user-attachments/assets/e971122a-6897-47c2-96ca-aebff9756d16" />
+
+**Imagen 10.** *Circuito del divisor de voltaje.*
+
+*Tomado de: Elaboración propia*
 
 # Procedimiento
 # Análisis de los Resultados
