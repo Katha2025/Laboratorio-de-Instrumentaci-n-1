@@ -136,9 +136,9 @@ disp(nombreArchivo);
 ```
 Dando como resultado:
 Primero para la persona respirando tranquilamente:
-<img width="1600" height="755" alt="WhatsApp Image 2026-08-05 at 12 46 28 PM" src="https://github.com/user-attachments/assets/85d3cf66-9400-4652-bcb0-49545a4f985f" /> 
+<img width="400" alt="WhatsApp Image 2026-08-05 at 12 46 28 PM" src="https://github.com/user-attachments/assets/85d3cf66-9400-4652-bcb0-49545a4f985f" />
 Y luego para la persona que lee en voz alta:
-<img width="1600" height="755" alt="image" src="https://github.com/user-attachments/assets/7082ee5a-e454-44d6-97e3-67e0606142f4" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/7082ee5a-e454-44d6-97e3-67e0606142f4" />
 
 
 
