@@ -42,7 +42,7 @@ En consecuencia, este proporcionó una señal respiratoria más estable y repres
 
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/7e24a0ed-e56e-456e-853e-157eb8601979" />
 
-**Imagen 1** *sensor de fuerza resistivo FSR402.*
+**Imagen 1.** *sensor de fuerza resistivo FSR402.*
 
 *Tomado de: https://www.zamux.co/sensor-de-fuerza-resistivo-fsr402*
 
@@ -58,14 +58,14 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/1ebef4ae-e72b-406a-ab9a-502729053fc4" />
 
-**Imagen 2** *Microcontrolador NI DAQMx.*
+**Imagen 2.** *Microcontrolador NI DAQMx.*
 
 *Tomado de: https://www.digikey.com/en/products/detail/ni/782602-01/12817647*
 
 
 <img width="555" height="312" alt="image" src="https://github.com/user-attachments/assets/1836559d-9071-4441-9362-f7c04407cbf6" />
 
-**Imagen 3** *Circuito del divisor de voltaje.*
+**Imagen 3.** *Circuito del divisor de voltaje.*
 
 *Tomado de: Elaboración propia*
 
