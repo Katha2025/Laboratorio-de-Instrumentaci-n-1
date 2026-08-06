@@ -87,7 +87,7 @@ Para empezar con la adquisición de la señal a partir del circuito antes hablad
   
  <img width="400" alt="image" src="https://github.com/user-attachments/assets/966073e9-0d07-426e-8451-58ce8d1be8fd" />
 
- **Imagen 5.** *Circuito del divisor de voltaje.*
+ **Imagen 5.** *Señal de respiración tranquila de prueba en NI-MAX.*
 
 *Tomado de: Elaboración propia*
 
@@ -95,7 +95,7 @@ Para empezar con la adquisición de la señal a partir del circuito antes hablad
   
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/489020ea-3772-42ff-bf86-07de40a1bc76" />
 
-**Imagen 6.** *Circuito del divisor de voltaje.*
+**Imagen 6.** *Señal de respiración mientras lee en voz alta de prueba en NI-MAX.*
 
 *Tomado de: Elaboración propia*
   
@@ -173,7 +173,7 @@ Y luego para la persona que lee en voz alta:
 3. FRECUENCIAS
 
 # Parte C
-Al notar que las señales contenían ruido de una frecuencia más alta se utilizó un filtro pasa bajos para limpiar la señal , el filtro limpia a 1 Hz, como se ve en el siguiente codigo:
+Al notar que las señales contenían ruido de una frecuencia más alta, se utilizó un filtro pasa bajos para limpiar la señal , el filtro limpia a 1 Hz, como se ve en el siguiente código:
 
 ``` matlab
 
@@ -305,13 +305,13 @@ fprintf('Archivo guardado: respiracion_filtrada.mat\n');
 Dando como resultado las siguientes señales:
 - <img width="400" alt="image" src="https://github.com/user-attachments/assets/a309b365-8a60-4839-935d-6c8276184c76" />
 
-**Imagen 9.** *Circuito del divisor de voltaje.*
+**Imagen 9.** *Señal de respiración tranquila de prueba en NI-MAX.*
 
 *Tomado de: Elaboración propia*
 
 - <img width="400" alt="image" src="https://github.com/user-attachments/assets/e971122a-6897-47c2-96ca-aebff9756d16" />
 
-**Imagen 10.** *Circuito del divisor de voltaje.*
+**Imagen 10.** *Señal de respiración mientras lee en voz alta de prueba en NI-MAX.*
 
 *Tomado de: Elaboración propia*
 
