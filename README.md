@@ -488,6 +488,8 @@ ylim([0, amplitudDominante * 1.15]);
 ```
 
 Dando como resultado las siguientes señales:
+
+
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/a6585d54-29b4-42f6-a54c-0ed4f90b7101" />
 
 
