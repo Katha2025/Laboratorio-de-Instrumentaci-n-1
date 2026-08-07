@@ -531,6 +531,9 @@ y su respectivo espectro de frecuencia:
 • **Pregunta 1: ¿Son los patrones respiratorios y frecuencias respiratorias
 iguales o diferentes en cada caso? ¿A qué se debe esto?**
 
+Respuesta: Los patrones respiratorios y las frecuencias respiratorias obtenidos no son iguales en las dos condiciones evaluadas, en la respiración tranquila se observa una señal más periódica, con ciclos regulares y una frecuencia dominante cercana a 0,167 Hz, equivalente aproximadamente a 10 respiraciones por minuto (RPM). En cambio, durante la lectura en voz alta la señal presenta un patrón más irregular, con variaciones en la amplitud y en la duración de los ciclos respiratorios, además de una frecuencia respiratoria mayor cercana a 12 RPM, como se evidencia en la señal filtrada.
+Estas diferencias se deben a que hablar modifica el patrón normal de la respiración, ya que la inspiración y la espiración deben coordinarse con la producción de la voz; durante la lectura, las espiraciones suelen prolongarse para permitir la emisión continua del habla y las inspiraciones ocurren de forma más rápida y variable, generando cambios tanto en la forma de la señal como en la frecuencia respiratoria. Además, el esfuerzo asociado al habla incrementa ligeramente la demanda ventilatoria, lo que explica las diferencias observadas entre ambas mediciones.
+
 
 • **Pregunta 2: ¿Cuáles serían las ventajas y desventajas de emplear múltiples
 sensores para el monitoreo del proceso respiratorio? ¿Cuáles podrían ser
