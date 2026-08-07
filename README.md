@@ -182,9 +182,6 @@ Y luego para la persona que lee en voz alta:
 
 
 
-     
-3. FRECUENCIAS
-
 # Parte C
 
 Al notar la presencia de ruido en la señal, se implementó un filtro pasa-bajas Butterworth con una frecuencia de corte de 1 Hz, debido a que la señal respiratoria se concentra principalmente en el intervalo de 0,1 a 0,5 Hz [7].
