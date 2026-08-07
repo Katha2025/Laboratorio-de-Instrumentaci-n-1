@@ -162,7 +162,8 @@ Dando como resultado:
 
 Primero para la persona respirando tranquilamente:
 
-<img width="400" alt="WhatsApp Image 2026-08-05 at 12 46 28 PM" src="https://github.com/user-attachments/assets/85d3cf66-9400-4652-bcb0-49545a4f985f" />
+<img width="1932" height="917" alt="image" src="https://github.com/user-attachments/assets/c23c45f1-a562-4027-873a-a97e9bb9b9ab" />
+
 
 **Imagen 8.** *Señal de respiración tranquila capturada en matlab sin filtrar.*
 
@@ -172,7 +173,8 @@ Primero para la persona respirando tranquilamente:
 Y luego para la persona que lee en voz alta:
 
 
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/7082ee5a-e454-44d6-97e3-67e0606142f4" />
+<img width="1932" height="917" alt="image" src="https://github.com/user-attachments/assets/3c4de9e8-68f1-4d8c-98cf-a86f86afcc09" />
+
 
 **Imagen 9.** *Señal de respiración mientras se lee en voz alta capturada en matlab sin filtrar.*
 
@@ -195,18 +197,28 @@ clear;
 clc;
 close all;
 
-archivo = 'respiracion_2026-08-05_12-52-55.mat';
+archivo = 'respiracion_2026-08-06_09-07-25.mat';
 
-S = load(archivo);
+S= load(archivo);
+
+
+if ~isfield(S, 'datos')
+    error('El archivo no contiene una variable llamada "datos".');
+end
+
 datos = S.datos;
 
 disp('Variables encontradas en el archivo:');
 disp(datos.Properties.VariableNames);
 
-
 senal = double(datos{:,1});
+senal = senal(:);
+
 tiempoOriginal = datos.Properties.RowTimes;
 tiempo = seconds(tiempoOriginal - tiempoOriginal(1));
+tiempo = double(tiempo(:));
+
+
 validos = isfinite(tiempo) & isfinite(senal);
 
 tiempo = tiempo(validos);
@@ -214,13 +226,11 @@ senal = senal(validos);
 
 senal = fillmissing(senal, 'linear');
 
-
 dt = median(diff(tiempo));
 fs = 1 / dt;
 
 fprintf('Frecuencia de muestreo: %.2f Hz\n', fs);
 fprintf('Duración de la señal: %.2f segundos\n', tiempo(end));
-
 
 diferencias = diff(tiempo);
 
@@ -240,62 +250,185 @@ if max(abs(diferencias - dt)) > 0.05 * dt
     tiempo = tiempoUniforme;
 end
 
-%filtro pasa bajos
-fc = 1;
 
+fc = 1;       % Frecuencia de corte en Hz
 orden = 4;
 
 if fc >= fs/2
     error(['La frecuencia de corte debe ser menor que fs/2. ', ...
-           'Frecuencia de muestreo calculada: %.2f Hz'], fs);
+           'Frecuencia de muestreo: %.2f Hz'], fs);
 end
 
 Wn = fc / (fs/2);
-[b, a] = butter(orden, Wn, 'low');
-senalFiltrada = filtfilt(b, a, senal);
 
-% graficar
-figure('Name', 'Señal respiratoria', ...
-       'NumberTitle', 'off', ...
-       'Color', 'white');
+[b, a] = butter(orden, Wn, 'low');
+
+
+senalFiltrada = filtfilt(b, a, -(senal));
+
+
+inicioVentana = 0;
+duracionVentanaDeseada = 30;
+
+finVentana = min( ...
+    inicioVentana + duracionVentanaDeseada, ...
+    tiempo(end));
+
+indicesVentana = ...
+    tiempo >= inicioVentana & tiempo <= finVentana;
+
+tiempoVentana = tiempo(indicesVentana);
+senalOriginalVentana = senal(indicesVentana);
+senalFiltradaVentana = senalFiltrada(indicesVentana);
+
+duracionVentanaReal = ...
+    tiempoVentana(end) - tiempoVentana(1);
+
+fprintf('Ventana analizada: %.2f a %.2f segundos\n', ...
+    tiempoVentana(1), tiempoVentana(end));
+
+fprintf('Duración real de la ventana: %.2f segundos\n', ...
+    duracionVentanaReal);
+
+
+distanciaMinimaPicos = 2;  % segundos
+
+
+amplitudVentana = ...
+    max(senalFiltradaVentana) - min(senalFiltradaVentana);
+
+prominenciaMinima = 0.15 * amplitudVentana;
+
+[picosRespiratorios, tiemposPicos] = findpeaks( ...
+    senalFiltradaVentana, ...
+    tiempoVentana, ...
+    'MinPeakDistance', distanciaMinimaPicos, ...
+    'MinPeakProminence', prominenciaMinima);
+
+
+numeroRespiraciones = length(picosRespiratorios);
+
+respiracionesPorMinuto = ...
+    numeroRespiraciones * (60 / duracionVentanaReal);
+
+fprintf('\n-------------------------------------\n');
+fprintf('Respiraciones detectadas: %d\n', ...
+    numeroRespiraciones);
+
+fprintf('Respiraciones por minuto: %.1f RPM\n', ...
+    respiracionesPorMinuto);
+
+fprintf('-------------------------------------\n');
+
+
+figure( ...
+    'Name', 'Detección de respiraciones', ...
+    'NumberTitle', 'off', ...
+    'Color', 'black');
 
 tiledlayout(2,1, 'TileSpacing', 'compact');
 
-% Señal original
+
 nexttile;
 
-plot(tiempo, senal, 'LineWidth', 0.7);
+plot( ...
+    tiempoVentana, ...
+    senalOriginalVentana, ...
+    'LineWidth', 0.7);
 
-title('Señal respiratoria sin filtrar');
+title('Señal respiratoria original — ventana de 30 segundos');
 xlabel('Tiempo (s)');
 ylabel('Voltaje (V)');
 
 grid on;
-xlim([tiempo(1), tiempo(end)]);
+xlim([tiempoVentana(1), tiempoVentana(end)]);
 
-% Señal filtrada
+
 nexttile;
 
-plot(tiempo, senalFiltrada, 'LineWidth', 2);
+plot( ...
+    tiempoVentana, ...
+    senalFiltradaVentana, ...
+    'LineWidth', 2);
+
+hold on;
+
+plot( ...
+    tiemposPicos, ...
+    picosRespiratorios, ...
+    'ro', ...
+    'MarkerSize', 8, ...
+    'MarkerFaceColor', 'r');
+
+
+%% ESPECTRO DE FRECUENCIA DE LA SEÑAL FILTRADA
+
+% Eliminar el valor medio para reducir el pico en 0 Hz
+senalParaFFT = senalFiltradaVentana - mean(senalFiltradaVentana);
+
+% Número de muestras de la ventana de 30 segundos
+N = length(senalParaFFT);
+
+% Aplicar ventana Hann para disminuir la fuga espectral
+ventanaHann = hann(N);
+senalParaFFT = senalParaFFT .* ventanaHann;
+
+% Calcular la transformada rápida de Fourier
+Y = fft(senalParaFFT);
+
+% Espectro de amplitud de dos lados
+P2 = abs(Y / N);
+
+% Espectro de un solo lado
+P1 = P2(1:floor(N/2) + 1);
+
+% Duplicar amplitudes, excepto la componente DC y Nyquist
+if length(P1) > 2
+    P1(2:end-1) = 2 * P1(2:end-1);
+end
+
+% Vector de frecuencias
+frecuencias = fs * (0:floor(N/2)) / N;
+
+
+% Numerar las respiraciones detectadas
+for k = 1:numeroRespiraciones
+
+    text( ...
+        tiemposPicos(k), ...
+        picosRespiratorios(k), ...
+        sprintf('  %d', k), ...
+        'FontWeight', 'bold', ...
+        'VerticalAlignment', 'bottom');
+end
+
+hold off;
 
 title(sprintf( ...
-    'Señal respiratoria filtrada — Butterworth de %.1f Hz', fc));
+    ['Señal filtrada — %d respiraciones detectadas ' ...
+     '= %.1f RPM'], ...
+    numeroRespiraciones, ...
+    respiracionesPorMinuto));
 
 xlabel('Tiempo (s)');
 ylabel('Voltaje (V)');
 
-grid on;
-xlim([tiempo(1), tiempo(end)]);
+legend( ...
+    'Señal filtrada', ...
+    'Respiraciones detectadas', ...
+    'Location', 'best');
 
-minimo = min(senalFiltrada);
-maximo = max(senalFiltrada);
-margen = 0.10 * (maximo - minimo);
+grid on;
+xlim([tiempoVentana(1), tiempoVentana(end)]);
+
+minimo = min(senalFiltradaVentana);
+maximo = max(senalFiltradaVentana);
+margen = 0.15 * (maximo - minimo);
 
 if margen > 0
     ylim([minimo - margen, maximo + margen]);
 end
 
-% guardar la señal filtrada
 
 tiemposGuardados = seconds(tiempo);
 
@@ -305,30 +438,244 @@ datosFiltrados = timetable( ...
     senalFiltrada, ...
     'VariableNames', {'Original', 'Filtrada'});
 
+resultadosRespiracion = struct;
+
+resultadosRespiracion.numeroRespiraciones = ...
+    numeroRespiraciones;
+
+resultadosRespiracion.respiracionesPorMinuto = ...
+    respiracionesPorMinuto;
+
+resultadosRespiracion.tiemposPicos = ...
+    tiemposPicos;
+
+resultadosRespiracion.amplitudPicos = ...
+    picosRespiratorios;
+
+resultadosRespiracion.duracionVentana = ...
+    duracionVentanaReal;
+
 save( ...
     'respiracion_filtrada.mat', ...
     'datosFiltrados', ...
+    'resultadosRespiracion', ...
     'fs', ...
     'fc');
 
-fprintf('\nFiltrado terminado.\n');
+fprintf('\nFiltrado y detección terminados.\n');
 fprintf('Archivo guardado: respiracion_filtrada.mat\n');
+
+
+ %% ESPECTRO DE FRECUENCIA DE LA SEÑAL FILTRADA
+
+% Eliminar el valor medio para reducir el pico en 0 Hz
+senalParaFFT = senalFiltradaVentana - mean(senalFiltradaVentana);
+
+% Número de muestras de la ventana de 30 segundos
+N = length(senalParaFFT);
+
+% Aplicar ventana Hann para disminuir la fuga espectral
+ventanaHann = hann(N);
+senalParaFFT = senalParaFFT .* ventanaHann;
+
+% Calcular la transformada rápida de Fourier
+Y = fft(senalParaFFT);
+
+% Espectro de amplitud de dos lados
+P2 = abs(Y / N);
+
+% Espectro de un solo lado
+P1 = P2(1:floor(N/2) + 1);
+
+% Duplicar amplitudes, excepto la componente DC y Nyquist
+if length(P1) > 2
+    P1(2:end-1) = 2 * P1(2:end-1);
+end
+
+% Vector de frecuencias
+frecuencias = fs * (0:floor(N/2)) / N;
+
+%% BUSCAR FRECUENCIA DOMINANTE RESPIRATORIA
+
+% Rango de interés respiratorio: 0.05 a 1 Hz
+indicesRespiratorios = ...
+    frecuencias >= 0.05 & frecuencias <= 1;
+
+frecuenciasRespiratorias = frecuencias(indicesRespiratorios);
+amplitudesRespiratorias = P1(indicesRespiratorios);
+
+% Encontrar el máximo del espectro en el rango respiratorio
+[amplitudDominante, indiceDominante] = ...
+    max(amplitudesRespiratorias);
+
+frecuenciaDominante = ...
+    frecuenciasRespiratorias(indiceDominante);
+
+% Convertir Hz a respiraciones por minuto
+rpmFFT = frecuenciaDominante * 60;
+
+fprintf('\nFrecuencia dominante: %.3f Hz\n', ...
+    frecuenciaDominante);
+
+fprintf('Respiraciones por minuto según FFT: %.1f RPM\n', ...
+    rpmFFT);
+
+% ESPECTRO DE FRECUENCIA DE LA SEÑAL FILTRADA
+
+senalParaFFT = senalFiltradaVentana - mean(senalFiltradaVentana);
+
+N = length(senalParaFFT);
+ventanaHann = hann(N);
+senalVentaneada = senalParaFFT .* ventanaHann;
+
+% Calcular la transformada rápida de Fourier
+Y = fft(senalVentaneada);
+
+P2 = abs(Y / N);
+
+P1 = P2(1:floor(N/2) + 1);
+
+if length(P1) > 2
+    P1(2:end-1) = 2 * P1(2:end-1);
+end
+
+
+frecuencias = fs * (0:floor(N/2)) / N;
+
+
+indicesBusqueda = ...
+    frecuencias > 0 & ...
+    frecuencias <= fc;
+
+
+frecuenciasBusqueda = frecuencias(indicesBusqueda);
+amplitudesBusqueda = P1(indicesBusqueda);
+
+
+if isempty(frecuenciasBusqueda)
+    error('No existen frecuencias disponibles en el rango seleccionado.');
+end
+
+[amplitudDominante, indiceDominante] = ...
+    max(amplitudesBusqueda);
+
+frecuenciaDominante = ...
+    frecuenciasBusqueda(indiceDominante);
+
+rpmFFT = frecuenciaDominante * 60;
+
+fprintf('\n-------------------------------------\n');
+fprintf('ANÁLISIS EN FRECUENCIA\n');
+fprintf('Punto más alto: %.3f Hz\n', ...
+    frecuenciaDominante);
+
+fprintf('Amplitud del punto más alto: %.5f\n', ...
+    amplitudDominante);
+
+fprintf('Equivalencia: %.1f RPM\n', ...
+    rpmFFT);
+
+fprintf('-------------------------------------\n');
+
+figure( ...
+    'Name', 'Espectro de frecuencia', ...
+    'NumberTitle', 'off', ...
+    'Color', 'black');
+
+
+plot( ...
+    frecuencias, ...
+    P1, ...
+    'LineWidth', 1.8);
+
+hold on;
+
+plot( ...
+    frecuenciaDominante, ...
+    amplitudDominante, ...
+    'ro', ...
+    'MarkerSize', 10, ...
+    'MarkerFaceColor', 'r');
+
+
+xline( ...
+    fc, ...
+    '--', ...
+    sprintf('Corte = %.1f Hz', fc), ...
+    'LineWidth', 1.5);
+
+textoPico = sprintf( ...
+    '  %.3f Hz\n  %.1f RPM', ...
+    frecuenciaDominante, ...
+    rpmFFT);
+
+text( ...
+    frecuenciaDominante, ...
+    amplitudDominante, ...
+    textoPico, ...
+    'FontSize', 11, ...
+    'FontWeight', 'bold', ...
+    'VerticalAlignment', 'bottom', ...
+    'HorizontalAlignment', 'left');
+
+hold off;
+
+title(sprintf( ...
+    ['Espectro de la señal filtrada — ' ...
+     'frecuencia dominante: %.3f Hz = %.1f RPM'], ...
+    frecuenciaDominante, ...
+    rpmFFT));
+
+xlabel('Frecuencia (Hz)');
+ylabel('Amplitud');
+
+legend( ...
+    'Espectro filtrado', ...
+    'Punto más alto', ...
+    'Frecuencia de corte', ...
+    'Location', 'best');
+
+grid on;
+box on;
+
+xlim([0, min(fc + 0.5, fs/2)]);
+ylim([0, amplitudDominante * 1.15]);
 
 ```
 
 Dando como resultado las siguientes señales:
-- <img width="400" alt="image" src="https://github.com/user-attachments/assets/a309b365-8a60-4839-935d-6c8276184c76" />
+<img width="2063" height="917" alt="image" src="https://github.com/user-attachments/assets/a6585d54-29b4-42f6-a54c-0ed4f90b7101" />
+
 
 **Imagen 10.** *Señal de respiración tranquila después de filtrarla*
 
+y su respectivo espectro de frecuencia:
+
+<img width="1958" height="917" alt="image" src="https://github.com/user-attachments/assets/1df75169-4dfa-44a7-be7a-c40c703ad51b" />
+
+
+**Imagen 13.** *Espectro de frecuencia de la señal de respiración  tranquila después de filtrarla*
+
 *Tomado de: Elaboración propia*
 
-- <img width="400" alt="image" src="https://github.com/user-attachments/assets/e971122a-6897-47c2-96ca-aebff9756d16" />
 
-**Imagen 11.** *Señal de respiración mientras lee en voz alta después de filtrarla*
 
 *Tomado de: Elaboración propia*
 
+- <img width="2063" height="917" alt="image" src="https://github.com/user-attachments/assets/81ac850c-1772-4b11-b025-c0d370230756" />
+
+
+**Imagen 12.** *Señal de respiración mientras lee en voz alta después de filtrarla*
+
+*Tomado de: Elaboración propia*
+
+y su respectivo espectro de frecuencia:
+
+<img width="1956" height="917" alt="image" src="https://github.com/user-attachments/assets/ad6af40e-e382-493b-9f8e-b08de19f56e6" />
+
+**Imagen 13.** *Espectro de frecuencia de la señal de respiración mientras lee en voz alta después de filtrarla*
+
+*Tomado de: Elaboración propia*
 # Procedimiento
 
 1. Para iniciar, se hizo una revisión de literatura acerca del proceso respiratorio para poder comprender qué señales se necesitaban medir y que significan las variables físicas involucradas en el proceso. 
