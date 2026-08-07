@@ -550,6 +550,10 @@ En términos generales, los resultados demuestran que el sistema de medición di
 
 # Conclusión
 
+- El uso del sensor piezorresistivo FSR402 permitió transformar las variaciones mecánicas producidas por la expansión y contracción del tórax en cambios de voltaje medibles mediante un divisor de tensión y una tarjeta DAQ. Esto demuestra que es posible desarrollar un sistema sencillo, económico y no invasivo para registrar el patrón respiratorio, con potencial de aplicación en dispositivos de monitoreo de pacientes.
+- La implementación del filtro pasa-bajas Butterworth con frecuencia de corte de 1 Hz mejoró la calidad de la señal al disminuir el ruido eléctrico, las vibraciones y las alteraciones producidas por movimientos involuntarios, conservando los componentes relacionados con la inspiración y la espiración. En el contexto biomédico, este acondicionamiento es fundamental para detectar correctamente los ciclos respiratorios y reducir errores en el cálculo de las respiraciones por minuto.
+- El análisis temporal mediante la detección de picos y el análisis frecuencial mediante la transformada rápida de Fourier permitieron estimar la frecuencia respiratoria y observar cambios en el patrón respiratorio entre la respiración tranquila y la lectura en voz alta. Esta capacidad podría aplicarse en sistemas de vigilancia respiratoria para identificar variaciones asociadas con actividad física, habla, estrés o posibles alteraciones pulmonares; sin embargo, para utilizarlo clínicamente sería necesario realizar calibraciones, pruebas con más participantes y una validación frente a equipos médicos de referencia.
+
 
 ## PREGUNTAS A DISCUSIÓN
 
