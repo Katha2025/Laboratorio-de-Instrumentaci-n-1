@@ -553,6 +553,9 @@ iguales o diferentes en cada caso? ¿A qué se debe esto?**
 sensores para el monitoreo del proceso respiratorio? ¿Cuáles podrían ser
 las razones?**
 
+Respuesta: El uso de múltiples sensores para el monitoreo del proceso respiratorio ofrece como principal ventaja una mayor precisión y confiabilidad, ya que cada sensor puede medir una variable diferente, como el movimiento torácico, el flujo de aire, la presión o la saturación de oxígeno. La combinación de estas mediciones proporciona información complementaria, facilita la detección de alteraciones respiratorias y reduce la posibilidad de errores causados por el ruido o la falla de un sensor. Sin embargo, el empleo de varios sensores también presenta desventajas, como el aumento del costo, una mayor complejidad en el procesamiento y sincronización de las señales, y una menor comodidad para el paciente debido a la cantidad de dispositivos utilizados.
+Estas ventajas y desventajas se deben a que ningún sensor es capaz de medir por sí solo todos los aspectos del proceso respiratorio. Por esta razón, combinar varios sensores permite obtener una evaluación más completa del estado respiratorio, aunque esto implica un sistema más complejo y con mayores requerimientos técnicos.
+
 ## Referencias
 [1] Nicolai, T. (2006). The physiological basis of respiratory support. Paediatric Respiratory Reviews, 7(2), 97–102. https://doi.org/10.1016/j.prrv.2006.03.002.
 
