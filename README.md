@@ -1,4 +1,4 @@
-# Laboratorio-de Instrumentación 1
+# MONITOREO DEL PATRÓN Y FRECUENCIA RESPIRATORIA
 # Parte A
 # 1) Revisión de la literatura
 
