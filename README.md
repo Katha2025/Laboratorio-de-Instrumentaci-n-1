@@ -162,7 +162,7 @@ Dando como resultado:
 
 Primero para la persona respirando tranquilamente:
 
-<img width="1932" height="917" alt="image" src="https://github.com/user-attachments/assets/c23c45f1-a562-4027-873a-a97e9bb9b9ab" />
+<img width="400" height="917" alt="image" src="https://github.com/user-attachments/assets/c23c45f1-a562-4027-873a-a97e9bb9b9ab" />
 
 
 **Imagen 8.** *Señal de respiración tranquila capturada en matlab sin filtrar.*
@@ -173,7 +173,7 @@ Primero para la persona respirando tranquilamente:
 Y luego para la persona que lee en voz alta:
 
 
-<img width="1932" height="917" alt="image" src="https://github.com/user-attachments/assets/3c4de9e8-68f1-4d8c-98cf-a86f86afcc09" />
+<img width="400" height="917" alt="image" src="https://github.com/user-attachments/assets/3c4de9e8-68f1-4d8c-98cf-a86f86afcc09" />
 
 
 **Imagen 9.** *Señal de respiración mientras se lee en voz alta capturada en matlab sin filtrar.*
@@ -488,14 +488,14 @@ ylim([0, amplitudDominante * 1.15]);
 ```
 
 Dando como resultado las siguientes señales:
-<img width="2063" height="917" alt="image" src="https://github.com/user-attachments/assets/a6585d54-29b4-42f6-a54c-0ed4f90b7101" />
+<img width="400" height="917" alt="image" src="https://github.com/user-attachments/assets/a6585d54-29b4-42f6-a54c-0ed4f90b7101" />
 
 
 **Imagen 10.** *Señal de respiración tranquila después de filtrarla y corregir la orientación*
 
 y su respectivo espectro de frecuencia:
 
-<img width="1958" height="917" alt="image" src="https://github.com/user-attachments/assets/1df75169-4dfa-44a7-be7a-c40c703ad51b" />
+<img width="400" height="917" alt="image" src="https://github.com/user-attachments/assets/1df75169-4dfa-44a7-be7a-c40c703ad51b" />
 
 
 **Imagen 13.** *Espectro de frecuencia de la señal de respiración  tranquila después de filtrarla*
@@ -506,7 +506,7 @@ y su respectivo espectro de frecuencia:
 
 *Tomado de: Elaboración propia*
 
-- <img width="2063" height="917" alt="image" src="https://github.com/user-attachments/assets/81ac850c-1772-4b11-b025-c0d370230756" />
+- <img width="400" height="917" alt="image" src="https://github.com/user-attachments/assets/81ac850c-1772-4b11-b025-c0d370230756" />
 
 
 **Imagen 12.** *Señal de respiración mientras lee en voz alta después de filtrarla y corregir la orientación*
@@ -515,7 +515,7 @@ y su respectivo espectro de frecuencia:
 
 y su respectivo espectro de frecuencia:
 
-<img width="1956" height="917" alt="image" src="https://github.com/user-attachments/assets/ad6af40e-e382-493b-9f8e-b08de19f56e6" />
+<img width="400" height="917" alt="image" src="https://github.com/user-attachments/assets/ad6af40e-e382-493b-9f8e-b08de19f56e6" />
 
 **Imagen 13.** *Espectro de frecuencia de la señal de respiración mientras lee en voz alta después de filtrarla*
 
