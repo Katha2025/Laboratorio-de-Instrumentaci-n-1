@@ -62,15 +62,13 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/1ebef4ae-e72b-406a-ab9a-502729053fc4" />
 
 **Imagen 2.** *Microcontrolador NI DAQMx.*
-
-*Tomado de: https://www.digikey.com/en/products/detail/ni/782602-01/12817647*
+*Tomado de: https://www.digikey.com/en/products/detail/ni/782602-01/12817647.*
 
 
 <img width="555" height="312" alt="image" src="https://github.com/user-attachments/assets/1836559d-9071-4441-9362-f7c04407cbf6" />
 
 **Imagen 3.** *Circuito del divisor de voltaje.*
-
-*Tomado de: Elaboración propia*
+*Tomado de: Elaboración propia.*
 
 
 
@@ -79,14 +77,12 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/7ae43601-8a1b-4053-b6a5-21aed5002b84" />
 
 **Imagen 4.** *Montaje.*
-
-*Tomado de: Elaboración propia*
+*Tomado de: Elaboración propia.*
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/dd2a6470-92b2-4aa3-b7ac-d7cecc23145a" />
 
 **Imagen 5.** *Prueba del sensor.*
-
-*Tomado de: Elaboración propia*
+*Tomado de: Elaboración propia.*
 
 
 
@@ -99,16 +95,14 @@ Para empezar con la adquisición de la señal a partir del circuito antes hablad
  <img width="400" alt="image" src="https://github.com/user-attachments/assets/966073e9-0d07-426e-8451-58ce8d1be8fd" />
 
  **Imagen 6.** *Señal de respiración tranquila de prueba en NI-MAX.*
-
-*Tomado de: Elaboración propia*
+*Tomado de: Elaboración propia.*
 
 - Luego , el participante se puso a leer en voz alta :
   
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/489020ea-3772-42ff-bf86-07de40a1bc76" />
 
 **Imagen 7.** *Señal de respiración mientras lee en voz alta de prueba en NI-MAX.*
-
-*Tomado de: Elaboración propia*
+*Tomado de: Elaboración propia.*
   
 # Parte B
 1. Código de matlab
@@ -166,8 +160,7 @@ Primero para la persona respirando tranquilamente:
 
 
 **Imagen 8.** *Señal de respiración tranquila capturada en matlab sin filtrar.*
-
-*Tomado de: Elaboración propia*
+*Tomado de: Elaboración propia.*
 
 
 Y luego para la persona que lee en voz alta:
@@ -177,8 +170,7 @@ Y luego para la persona que lee en voz alta:
 
 
 **Imagen 9.** *Señal de respiración mientras se lee en voz alta capturada en matlab sin filtrar.*
-
-*Tomado de: Elaboración propia*
+*Tomado de: Elaboración propia.*
 
 
 
@@ -491,6 +483,7 @@ Dando como resultado las siguientes señales:
 
 
 **Imagen 10.** *Señal de respiración tranquila después de filtrarla y corregir la orientación*
+*Tomado de: Elaboración propia.*
 
 y su respectivo espectro de frecuencia:
 
@@ -498,23 +491,20 @@ y su respectivo espectro de frecuencia:
 
 
 **Imagen 11.** *Espectro de frecuencia de la señal de respiración  tranquila después de filtrarla*
-
-*Tomado de: Elaboración propia*
+*Tomado de: Elaboración propia.*
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/81ac850c-1772-4b11-b025-c0d370230756" /> 
 
 
 **Imagen 12.** *Señal de respiración mientras lee en voz alta después de filtrarla y corregir la orientación*
-
-*Tomado de: Elaboración propia*
+*Tomado de: Elaboración propia.*
 
 y su respectivo espectro de frecuencia:
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/ad6af40e-e382-493b-9f8e-b08de19f56e6" />
 
 **Imagen 13.** *Espectro de frecuencia de la señal de respiración mientras lee en voz alta después de filtrarla*
-
-*Tomado de: Elaboración propia*
+*Tomado de: Elaboración propia.*
 # Procedimiento
 
 1. Para iniciar, se hizo una revisión de literatura acerca del proceso respiratorio para poder comprender qué señales se necesitaban medir y que significan las variables físicas involucradas en el proceso. 
