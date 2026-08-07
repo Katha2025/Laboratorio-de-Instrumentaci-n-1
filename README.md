@@ -488,14 +488,14 @@ ylim([0, amplitudDominante * 1.15]);
 ```
 
 Dando como resultado las siguientes señales:
-<img width="400" height="917" alt="image" src="https://github.com/user-attachments/assets/a6585d54-29b4-42f6-a54c-0ed4f90b7101" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/a6585d54-29b4-42f6-a54c-0ed4f90b7101" />
 
 
 **Imagen 10.** *Señal de respiración tranquila después de filtrarla y corregir la orientación*
 
 y su respectivo espectro de frecuencia:
 
-<img width="400" height="917" alt="image" src="https://github.com/user-attachments/assets/1df75169-4dfa-44a7-be7a-c40c703ad51b" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/1df75169-4dfa-44a7-be7a-c40c703ad51b" />
 
 
 **Imagen 13.** *Espectro de frecuencia de la señal de respiración  tranquila después de filtrarla*
