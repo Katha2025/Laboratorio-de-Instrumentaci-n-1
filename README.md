@@ -74,7 +74,7 @@ Posteriormente, para la adquisición de la señal se empleó el dispositivo de a
 
 
 
-# 4) Montaje y prueba del sensor (Foto)
+# 4) Montaje y prueba del sensor 
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/7ae43601-8a1b-4053-b6a5-21aed5002b84" />
 
