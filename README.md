@@ -500,7 +500,7 @@ y su respectivo espectro de frecuencia:
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/1df75169-4dfa-44a7-be7a-c40c703ad51b" />
 
 
-**Imagen 13.** *Espectro de frecuencia de la señal de respiración  tranquila después de filtrarla*
+**Imagen 11.** *Espectro de frecuencia de la señal de respiración  tranquila después de filtrarla*
 
 *Tomado de: Elaboración propia*
 
