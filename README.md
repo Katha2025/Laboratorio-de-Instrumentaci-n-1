@@ -56,12 +56,12 @@ Con relación al diseño del sistema, inicialmente se planteó implementar un pu
 
 Para el diseño del divisor de voltaje, primero se midió la resistencia del sensor utilizando un multímetro, obteniéndose un valor aproximado de 220 Ω. Con base en esta medición, se seleccionó una resistencia fija de 220 Ω para conformar el divisor, con el fin de obtener un punto de operación adecuado y maximizar la sensibilidad del circuito frente a las variaciones producidas por la respiración.
 
-Posteriormente, para la adquisición de la señal se empleó el microcontrolador NI DAQmx, encargado de capturar la señal analógica generada por el divisor de voltaje y convertirla al dominio digital, una vez digitalizada la señal pudo ser procesada y analizada en el computador, permitiendo observar el comportamiento del patrón respiratorio y calcular la frecuencia respiratoria durante las dos diferentes condiciones evaluadas.
+Posteriormente, para la adquisición de la señal se empleó el dispositivo de adquisición de datos (DAQ), encargado de capturar la señal analógica generada por el divisor de voltaje y convertirla al dominio digital, una vez digitalizada la señal pudo ser procesada y analizada en el computador, permitiendo observar el comportamiento del patrón respiratorio y calcular la frecuencia respiratoria durante las dos diferentes condiciones evaluadas.
 
 
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/1ebef4ae-e72b-406a-ab9a-502729053fc4" />
 
-**Imagen 2.** *Microcontrolador NI DAQMx.*
+**Imagen 2.** *Dispositivo de adquisición de datos (DAQ) de National Instruments.*
 *Tomado de: https://www.digikey.com/en/products/detail/ni/782602-01/12817647.*
 
 
@@ -509,7 +509,7 @@ y su respectivo espectro de frecuencia:
 
 1. Para iniciar, se hizo una revisión de literatura acerca del proceso respiratorio para poder comprender qué señales se necesitaban medir y que significan las variables físicas involucradas en el proceso. 
 
-2. A partir de esta información, se seleccionó el sensor más adecuado para el propósito de esta práctica, el cuál fue un sensor de fuerza resistivo FSR402. Al elegir dicho sensor, se investigó cómo condicionar la señal para poder capturarla a través de un conversor análogo-digital donde se concluyó que el circuito mejor adaptado para esta práctica de laboratorio es un divisor de voltaje. Asimismo, se consideraron diferentes conversores análogos digitales para observar cuales se podían integrar al  montaje con más facilidad, el cual en este caso fue un dispositivo NI-DAQMx.
+2. A partir de esta información, se seleccionó el sensor más adecuado para el propósito de esta práctica, el cuál fue un sensor de fuerza resistivo FSR402. Al elegir dicho sensor, se investigó cómo condicionar la señal para poder capturarla a través de un conversor análogo-digital donde se concluyó que el circuito mejor adaptado para esta práctica de laboratorio es un divisor de voltaje. Asimismo, se consideraron diferentes conversores análogos digitales para observar cuales se podían integrar al  montaje con más facilidad, el cual en este caso fue un Dispositivo de adquisición de datos (DAQ).
 
 3. Continuando, al conocer cómo se necesitaba condicionar el sensor, se diseñó un montaje donde el sensor se podía adaptar al cuerpo del sujeto de prueba, se podía conectar al circuito de acondicionamiento y su salida fuera leída por el conversor análogo digital el cual mostraría los resultados en un computador. Se alimentó el circuito con una tensión de 5V.
 
