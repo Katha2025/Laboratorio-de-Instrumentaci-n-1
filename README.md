@@ -45,7 +45,7 @@ En consecuencia, este proporcionó una señal respiratoria más estable y repres
 
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/7e24a0ed-e56e-456e-853e-157eb8601979" />
 
-**Imagen 1.** *sensor de fuerza resistivo FSR402.*
+**Imagen 1.** *Sensor de fuerza resistivo FSR402.*
 
 *Tomado de: https://www.zamux.co/sensor-de-fuerza-resistivo-fsr402.*
 
