@@ -162,7 +162,7 @@ Dando como resultado:
 
 Primero para la persona respirando tranquilamente:
 
-<img width="400" height="917" alt="image" src="https://github.com/user-attachments/assets/c23c45f1-a562-4027-873a-a97e9bb9b9ab" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/c23c45f1-a562-4027-873a-a97e9bb9b9ab" />
 
 
 **Imagen 8.** *Señal de respiración tranquila capturada en matlab sin filtrar.*
@@ -173,7 +173,7 @@ Primero para la persona respirando tranquilamente:
 Y luego para la persona que lee en voz alta:
 
 
-<img width="400" height="917" alt="image" src="https://github.com/user-attachments/assets/3c4de9e8-68f1-4d8c-98cf-a86f86afcc09" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/3c4de9e8-68f1-4d8c-98cf-a86f86afcc09" />
 
 
 **Imagen 9.** *Señal de respiración mientras se lee en voz alta capturada en matlab sin filtrar.*
