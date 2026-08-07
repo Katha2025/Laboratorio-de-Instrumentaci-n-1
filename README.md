@@ -76,13 +76,13 @@ Posteriormente, para la adquisición de la señal se empleó el microcontrolador
 
 # 4) Montaje y prueba del sensor (Foto)
 
-<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/7ae43601-8a1b-4053-b6a5-21aed5002b84" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/7ae43601-8a1b-4053-b6a5-21aed5002b84" />
 
 **Imagen 4.** *Montaje.*
 
 *Tomado de: Elaboración propia*
 
-<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/dd2a6470-92b2-4aa3-b7ac-d7cecc23145a" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/dd2a6470-92b2-4aa3-b7ac-d7cecc23145a" />
 
 **Imagen 5.** *Prueba del sensor.*
 
