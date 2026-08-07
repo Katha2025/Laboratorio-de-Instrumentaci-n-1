@@ -491,7 +491,7 @@ Dando como resultado las siguientes señales:
 <img width="2063" height="917" alt="image" src="https://github.com/user-attachments/assets/a6585d54-29b4-42f6-a54c-0ed4f90b7101" />
 
 
-**Imagen 10.** *Señal de respiración tranquila después de filtrarla*
+**Imagen 10.** *Señal de respiración tranquila después de filtrarla y corregir la orientación*
 
 y su respectivo espectro de frecuencia:
 
@@ -509,7 +509,7 @@ y su respectivo espectro de frecuencia:
 - <img width="2063" height="917" alt="image" src="https://github.com/user-attachments/assets/81ac850c-1772-4b11-b025-c0d370230756" />
 
 
-**Imagen 12.** *Señal de respiración mientras lee en voz alta después de filtrarla*
+**Imagen 12.** *Señal de respiración mientras lee en voz alta después de filtrarla y corregir la orientación*
 
 *Tomado de: Elaboración propia*
 
