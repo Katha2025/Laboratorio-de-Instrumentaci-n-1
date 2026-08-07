@@ -501,11 +501,7 @@ y su respectivo espectro de frecuencia:
 
 *Tomado de: Elaboración propia*
 
-
-
-*Tomado de: Elaboración propia*
-
-- <img width="400" height="917" alt="image" src="https://github.com/user-attachments/assets/81ac850c-1772-4b11-b025-c0d370230756" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/81ac850c-1772-4b11-b025-c0d370230756" /> 
 
 
 **Imagen 12.** *Señal de respiración mientras lee en voz alta después de filtrarla y corregir la orientación*
@@ -514,7 +510,7 @@ y su respectivo espectro de frecuencia:
 
 y su respectivo espectro de frecuencia:
 
-<img width="400" height="917" alt="image" src="https://github.com/user-attachments/assets/ad6af40e-e382-493b-9f8e-b08de19f56e6" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/ad6af40e-e382-493b-9f8e-b08de19f56e6" />
 
 **Imagen 13.** *Espectro de frecuencia de la señal de respiración mientras lee en voz alta después de filtrarla*
 
